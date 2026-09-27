@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Omar 🤍</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #342b35;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,.85), transparent 28%),
+      radial-gradient(circle at 85% 75%, rgba(231,211,221,.55), transparent 30%),
+      linear-gradient(135deg, #f8f1f4, #efe4ea 45%, #e9dbe4);
+    overflow-x: hidden;
+  }
+
+  .floating { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+  .floating span {
+    position: absolute;
+    bottom: -40px;
+    font-size: 20px;
+    opacity: .25;
+    animation: float 12s linear infinite;
+  }
+  .floating span:nth-child(1){left:8%;animation-delay:0s}
+  .floating span:nth-child(2){left:22%;animation-delay:4s;font-size:14px}
+  .floating span:nth-child(3){left:48%;animation-delay:7s}
+  .floating span:nth-child(4){left:70%;animation-delay:2s;font-size:16px}
+  .floating span:nth-child(5){left:88%;animation-delay:5s}
+  @keyframes float {
+    from { transform: translateY(0) rotate(0); }
+    to { transform: translateY(-115vh) rotate(180deg); }
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    width: min(920px, 92%);
+    margin: 0 auto;
+    padding: 50px 0 70px;
+  }
+
+  .card {
+    background: rgba(255,255,255,.76);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 28px;
+    box-shadow: 0 25px 70px rgba(82,57,73,.14);
+    overflow: hidden;
+  }
+
+  .hero {
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 65px 25px;
+    position: relative;
+  }
+
+  .eyebrow {
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #927083;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(65px, 11vw, 112px);
+    line-height: .78;
+    font-weight: 500;
+    margin: 0;
+    color: #493443;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 7vw, 64px);
+    margin: 22px 0 14px;
+    color: #76556a;
+    font-style: italic;
+  }
+
+  .intro {
+    max-width: 570px;
+    margin: 0 auto;
+    line-height: 1.9;
+    font-size: 14px;
+    color: #655761;
+  }
+
+  .open-btn, .channel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    transition: .25s ease;
+  }
+
+  .open-btn {
+    margin-top: 30px;
+    color: white;
+    background: #75566a;
+    box-shadow: 0 10px 25px rgba(117,86,106,.24);
+  }
+
+  .open-btn:hover, .channel-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(117,86,106,.24);
+  }
+
+  .small-note {
+    margin-top: 18px;
+    font-size: 11px;
+    color: #9a8791;
+  }
+
+  .gift {
+    padding: 70px 9%;
+    text-align: center;
+    background: rgba(255,255,255,.46);
+    border-top: 1px solid rgba(160,130,145,.12);
+  }
+
+  .gift-tag {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: #f0e4ea;
+    color: #76566a;
+    letter-spacing: .16em;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 6vw, 58px);
+    font-weight: 500;
+    margin: 17px 0 12px;
+    color: #493443;
+  }
+
+  .gift p {
+    max-width: 610px;
+    margin: 0 auto 28px;
+    line-height: 1.9;
+    font-size: 14px;
+    color: #675b63;
+  }
+
+  .gift-box {
+    max-width: 620px;
+    margin: 35px auto 0;
+    padding: 34px;
+    border: 1px solid #eadce3;
+    border-radius: 22px;
+    background: rgba(255,255,255,.72);
+  }
+
+  .gift-icon { font-size: 48px; margin-bottom: 10px; }
+  .channel-btn { background:#493443; color:#fff; }
+
+  .qr-area {
+    margin: 34px auto 0;
+    max-width: 280px;
+  }
+
+  .qr-area img {
+    width: 190px;
+    height: 190px;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 12px;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 8px 25px rgba(60,40,50,.10);
+  }
+
+  .qr-text { font-size: 11px; line-height: 1.6; color: #897681; }
+
+  .footer {
+    padding: 35px 20px 45px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: #76566a;
+    font-style: italic;
+  }
+
+  .heart { display:inline-block; animation: heartbeat 1.8s infinite; }
+  @keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    15% { transform: scale(1.15); }
+    30% { transform: scale(1); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: .8s ease;
+  }
+  .reveal.show { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 600px) {
+    .wrap { padding-top: 18px; width: 95%; }
+    .card { border-radius: 22px; }
+    .hero { min-height: 590px; padding: 50px 22px; }
+    .gift { padding: 55px 7%; }
+    .gift-box { padding: 25px 16px; }
+  }
+</style>
+</head>
+
+<body>
+<div class="floating" aria-hidden="true">
+  <span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span>
+</div>
+
+<main class="wrap">
+  <section class="card">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">A little birthday surprise</div>
+        <h1>Happy<br>Birthday</h1>
+        <div class="name">Omar</div>
+        <p class="intro">
+          I wanted to give you something that isn't just a gift,
+          but a little place for your ideas, your creativity, and
+          everything you want to create.
+        </p>
+
+        <a class="open-btn" href="#gift">Open Your Gift ↓</a>
+        <div class="small-note">made especially for you ♡</div>
+      </div>
+    </div>
+
+    <section class="gift reveal" id="gift">
+      <span class="gift-tag">Your gift</span>
+      <h2>A little corner of the internet — just for you.</h2>
+      <p>
+        I created a Google account and a YouTube channel for you —
+        a space where you can share, create, learn, experiment,
+        and let your ideas become something real.
+      </p>
+
+      <div class="gift-box">
+        <div class="gift-icon">🎁</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;margin:8px 0 12px;">
+          Your YouTube Channel
+        </h3>
+        <p style="margin-bottom:22px;">
+          Your first little step into a space that can grow with you.
+        </p>
+
+        <a
+          class="channel-btn"
+          href="https://www.youtube.com/channel/UCmNIpfEb82tmO8z8YwMO4Hg"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Your Channel ↗
+        </a>
+
+        <div class="qr-area">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCmNIpfEb82tmO8z8YwMO4Hg"
+            alt="QR code for Omar's YouTube channel"
+          >
+          <div class="qr-text">
+            Scan this code with your phone to open your channel.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      Here's to everything you're going to create next.
+      <span class="heart">♡</span>
+    </div>
+  </section>
+</main>
+
+<script>
+  const gift = document.querySelector('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.18 });
+  observer.observe(gift);
+</script>
+</body>
+</html>
